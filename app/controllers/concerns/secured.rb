@@ -9,8 +9,9 @@ module Secured
   end
 
   SCOPES = {
-    "/api/private" => nil,
+    "/private" => nil,
     "/private-scoped" => ["read:messages"],
+    "/users-by-email" => ["read:users"],
   }
 
   private
