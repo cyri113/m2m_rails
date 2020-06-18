@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require "json_web_token"
+
 module Secured
   extend ActiveSupport::Concern
 
@@ -7,7 +9,7 @@ module Secured
   end
 
   SCOPES = {
-    "/private" => nil,
+    "/api/private" => nil,
     "/private-scoped" => ["read:messages"],
   }
 
